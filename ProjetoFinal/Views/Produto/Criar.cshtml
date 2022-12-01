@@ -1,0 +1,33 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Cadastrar Produto";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Produto</h1>
+
+</div>
+
+<form asp-controller="Produto" asp-action="Criar" method="post">
+    <div class="mb-3">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do produto">
+        @Html.ValidationMessageFor(x =>x.Nome)
+    </div>
+
+    <div class="mb-3">
+        <label for="quantidade">Quantidade</label>
+        <input type="number" asp-for="Quantidade" class="form-control" min="0" placeholder="Digite um número igual ou maior que zero" />
+        @Html.ValidationMessageFor(x =>x.Quantidade)
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">
+            Cadastrar Produto
+        </button>
+        <a class="btn btn-secondary" asp-controller="Produto" asp-action="Index" role="button">Voltar</a>
+    </div>
+</form>
+
+
