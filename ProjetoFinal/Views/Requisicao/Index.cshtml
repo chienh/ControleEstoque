@@ -1,0 +1,65 @@
+﻿@model List<Requisicao>
+
+@{
+    ViewData["Title"] = "Listagem de Requisições";
+}
+
+<h1>Listagem de Requisições</h1>
+
+
+@if (TempData["MensagemSucesso"] != null)
+{    
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-success btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>    
+}
+
+@if (TempData["MensagemErro"] != null)
+{ 
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-primary" asp-controller="Requisicao" asp-action="Criar" role="button">Adicionar nova requisição</a>
+    }
+</div>
+
+<table class="table" id="table-requisicoes">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Quantidade</th>            
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>       
+        @if (Model != null && Model.Any())
+        {
+           foreach (Requisicao requisicao in Model)
+            {
+                <tr>
+                    <th scope="row">@requisicao.Id</th>
+                    <td>@requisicao.Produto.Nome</td>
+                    <td>@requisicao.Quantidade</td>
+                    <td>
+                        <div class="btn-group" role="button">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <!--<a role="button" class="btn btn-primary" asp-controller="Requisicao" asp-route-id="@requisicao.Id" asp-action="Editar">Editar</a>-->
+                                <a role="button" class="btn btn-danger" asp-controller="Requisicao" asp-route-id="@requisicao.Id" asp-action="ApagarConfirmacao">Apagar</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

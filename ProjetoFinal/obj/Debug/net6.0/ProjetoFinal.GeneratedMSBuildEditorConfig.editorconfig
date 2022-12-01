@@ -44,6 +44,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/curso_asp_net/ProjetoFinal/ProjetoFinal/Views/Requisicao/ApagarConfirmacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xBcGFnYXJDb25maXJtYWNhby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/curso_asp_net/ProjetoFinal/ProjetoFinal/Views/Requisicao/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xDcmlhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/curso_asp_net/ProjetoFinal/ProjetoFinal/Views/Requisicao/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/curso_asp_net/ProjetoFinal/ProjetoFinal/Views/Requisicao/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlzaWNhb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/curso_asp_net/ProjetoFinal/ProjetoFinal/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

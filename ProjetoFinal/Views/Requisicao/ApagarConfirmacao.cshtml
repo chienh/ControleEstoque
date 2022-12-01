@@ -1,0 +1,16 @@
+﻿@model Requisicao
+@{
+    ViewData["Title"] = "Confirmação de Exclusão de Requisicao";
+}
+
+<div class="text-center">
+    <h3>Deseja apagar a requisição de @Model.Quantidade items do produto "@Model.Produto.Nome" ?</h3>
+</div>
+
+<div class="d-grid gap-2">
+    <a class="btn btn-primary" asp-controller="Requisicao" asp-action="Index" role="button">Cancelar exclusão</a>
+    <a class="btn btn-danger" asp-action="Apagar" asp-controller="Requisicao" asp-route-id="@Model.Id" role="button">Confirmar exclusão</a>
+</div>
+
+
+

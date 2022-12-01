@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 $(document).ready(function () {
     getDataTable('#table-produtos');
-    //getDataTable('#table-usuarios');
+    getDataTable('#table-requisicoes');
 })
 
 function getDataTable(id) {

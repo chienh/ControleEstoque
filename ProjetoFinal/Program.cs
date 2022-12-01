@@ -22,6 +22,7 @@ namespace ProjetoFinal
 
 
             builder.Services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            builder.Services.AddScoped<IRequisicaoRepositorio, RequisicaoRepositorio>();
 
             builder.Services.AddControllersWithViews();
 

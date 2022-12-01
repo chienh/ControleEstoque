@@ -11,13 +11,13 @@ namespace ProjetoFinal.Repositorio
             _context = bancoContext;
         }
 
-        public Produto Adicionar(Produto contato)
+        public Produto Adicionar(Produto produto)
         {
             //gravar no banco de dados
-            _context.Produtos.Add(contato);
+            _context.Produtos.Add(produto);
             _context.SaveChanges();
 
-            return contato;
+            return produto;
         }
 
         public List<Produto> BuscarTodos()

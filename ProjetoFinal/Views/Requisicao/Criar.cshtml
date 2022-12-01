@@ -1,0 +1,53 @@
+﻿@model Requisicao
+
+@{
+    ViewData["Title"] = "Cadastrar Requisição";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar Requisição</h1>
+</div>
+
+@if (TempData["MensagemSucesso"] != null)
+{    
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-success btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>    
+}
+
+@if (TempData["MensagemErro"] != null)
+{ 
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<form asp-controller="Requisicao" asp-action="Criar" method="post">
+    <div class="mb-3">
+        <label for="Produto.Id">Produto</label>        
+        <select asp-for="Produto.Id" class="form-control">            
+            @foreach (Produto produto in ViewBag.Produtos)
+            {
+                <option value="@produto.Id">@produto.Nome</option>
+            }
+        </select>
+        @Html.ValidationMessageFor(x =>x.Produto)
+    </div>
+
+    <div class="mb-3">
+        <label for="quantidade">Quantidade</label>
+        <input type="number" asp-for="Quantidade" class="form-control" min="0" placeholder="Digite um número igual ou maior que zero" />
+        @Html.ValidationMessageFor(x =>x.Quantidade)
+    </div>
+
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">
+            Cadastrar Requisição
+        </button>
+        <a class="btn btn-secondary" asp-controller="Requisicao" asp-action="Index" role="button">Voltar</a>
+    </div>
+</form>
+
+

@@ -8,7 +8,8 @@ namespace ProjetoFinal.Models
 
         public int Id { get; set; }
 
-        public Produto produto { get; set; }
+        [Required(ErrorMessage = "Selecione o produto")]
+        public Produto Produto { get; set; }
 
         [Required(ErrorMessage = "Digite a quantidade de produtos")]
         public int Quantidade { get; set; }
